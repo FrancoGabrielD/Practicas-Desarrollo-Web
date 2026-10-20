@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="DJ Delta: DJ para boliches, fiestas y eventos de todo tipo. Contratá tu fecha.">
+  <meta name="theme-color" content="#14123A">
+  <title>DJ Delta | DJ para eventos y boliches</title>
+
+  <!-- Fuente principal: Montserrat -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800;900&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/estilos.css">
+</head>
+
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="nav" id="nav" aria-label="Principal">
+    <a class="nav__logo" href="#inicio">DJ Delta</a>
+
+    <button class="nav__toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <span></span><span></span><span></span>
+    </button>
+
+    <ul class="nav__links" id="navLinks">
+      <li><a href="#bio">Quién soy</a></li>
+      <li><a href="#lanzamientos">Mixes</a></li>
+      <li><a href="#contacto">Contratar</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <!-- HERO -->
+    <header class="hero" id="inicio">
+
+      <div class="hero__contenido">
+        <p class="hero__sub">Música para tu fiesta</p>
+        <!-- <h1 class="hero__titulo">Delta</h1> -->
+        <h1 class="hero__logo">
+          <img src="img/img2.png" alt="DJ Delta">
+        </h1>
+        <p class="hero__texto">
+          Boliches, casamientos, cumpleaños y eventos de empresa.
+          Yo pongo la música, vos ponés la fecha.
+        </p>
+        <div class="hero__botones">
+          <a class="btn btn--principal" href="#contacto">Contratar a Delta</a>
+          <a class="btn btn--secundario" href="#lanzamientos">Escuchar mixes</a>
+        </div>
+      </div>
+    </header>
+
+    <!-- BIO -->
+    <section class="bio" id="bio">
+      <div class="bio__contenedor contenedor">
+        <h2>Quién soy</h2>
+
+        <p>
+          Soy Delta, DJ con 10 años de experiencia en eventos.
+          Toqué por todo Viedma y Patagones, también me extendí a otras localidades
+          cuando se daba la oportunidad. Toco de todo, desde cumbia hasta electrónica,
+          y me adapto a cualquier tipo de público.
+        </p>
+
+        <p>
+          Armo cada set según el público y el momento de la noche, para que la
+          pista no se vacíe. Cumpleaños, casamientos, fiestas de empresa o
+          boliche: me adapto a lo que necesites.
+        </p>
+
+        <div class="bio__media">
+          <video src="img/biovid.mp4" controls playsinline aria-label="DJ Delta mezclando en vivo"></video>
+          <img src="img/bio1.jpeg" alt="DJ Delta en un evento">
+          <img src="img/bio2.jpeg" alt="DJ Delta frente al público">
+        </div>
+      </div>
+    </section>
+
+    <!-- LANZAMIENTOS / MIXES -->
+    <section class="lanzamientos" id="lanzamientos">
+      <div class="lanzamientos__contenedor contenedor">
+        <h2>Último lanzamiento</h2>
+        <p class="lanzamientos__intro">Mi mix más reciente, para escuchar donde quieras.</p>
+
+        <div class="video" id="videoDelta" data-id="Q3w_QfgEw28" data-titulo="PREVIANDO #1 (Reguetón Old)">
+          <button class="video__play" type="button" aria-label="Reproducir el mix">
+            <img class="video__miniatura" src="img/miniatura.png" alt="Portada del mix">
+            <span class="video__icono" aria-hidden="true"></span>
+          </button>
+        </div>
+
+        <p class="lanzamientos__nombre">PREVIANDO #1 (Reguetón Old)</p>
+        <a class="btn btn--secundario" href="https://www.youtube.com/@DeltaOk/videos" target="_blank" rel="noopener">Ver
+          más en YouTube</a>
+      </div>
+    </section>
+
+    <!-- CONTRATACIÓN -->
+    <section class="contacto" id="contacto">
+      <div class="contacto__contenedor contenedor">
+        <h2>Contratá a Delta</h2>
+        <p class="contacto__intro">
+          Completá los datos de tu evento y te respondo con disponibilidad y presupuesto.
+        </p>
+
+        <form class="form" id="formContacto" novalidate>
+
+          <fieldset class="form__grupo">
+            <legend>Tus datos</legend>
+
+            <div class="campo campo--ancho">
+              <label for="nombre">Nombre y apellido</label>
+              <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" autocomplete="tel" required>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo">
+              <label for="email">Mail</label>
+              <input type="email" id="email" name="email" autocomplete="email" required>
+              <small class="campo__error"></small>
+            </div>
+          </fieldset>
+
+          <fieldset class="form__grupo">
+            <legend>Tu evento</legend>
+
+            <div class="campo">
+              <label for="tipo">Tipo de evento</label>
+              <select id="tipo" name="tipo" required>
+                <option value="" selected disabled>Elegí una opción</option>
+                <option>Cumpleaños</option>
+                <option>Casamiento</option>
+                <option>Fiesta de 15</option>
+                <option>Evento de empresa</option>
+                <option>Boliche / fiesta en local</option>
+                <option>Otro</option>
+              </select>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo">
+              <label for="fecha">Fecha</label>
+              <input type="date" id="fecha" name="fecha" required>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo">
+              <label for="personas">Cantidad de personas</label>
+              <input type="number" id="personas" name="personas" min="1" inputmode="numeric" required>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo">
+              <label for="lugar">Lugar</label>
+              <input type="text" id="lugar" name="lugar" placeholder="Salón, ciudad o dirección" required>
+              <small class="campo__error"></small>
+            </div>
+
+            <div class="campo campo--ancho">
+              <label for="detalles">Detalles extra (opcional)</label>
+              <textarea id="detalles" name="detalles" rows="4"
+                placeholder="Horario, estilos de música, equipos que ya tienen, etc."></textarea>
+            </div>
+          </fieldset>
+
+          <button class="btn btn--principal form__enviar" type="submit">Enviar solicitud</button>
+          <p class="form__estado" id="formEstado" role="status"></p>
+        </form>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <ul class="footer__redes">
+        <li>
+          <a href="https://www.instagram.com/deltaokk" target="_blank" rel="noopener"
+            aria-label="Instagram de DJ Delta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <rect x="2" y="2" width="20" height="20" rx="5" ry="5" />
+              <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z" />
+              <line x1="17.5" y1="6.5" x2="17.51" y2="6.5" />
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.facebook.com/franco.diaz.980525" target="_blank" rel="noopener"
+            aria-label="Facebook de DJ Delta">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+              stroke-linejoin="round" aria-hidden="true">
+              <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
+            </svg>
+          </a>
+        </li>
+      </ul>
+
+      <p>© <span id="anio"></span> DJ Delta. Todos los derechos reservados.</p>
+    </footer>
+
+</html>
